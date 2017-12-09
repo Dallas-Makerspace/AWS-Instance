@@ -1,0 +1,42 @@
+{
+  "name": "AWS Instance",
+  "description": "A AWS Server instance",
+  "keywords": ["docker", "aws"],
+  "repository": "https://github.com/Dallas-Makerspace/AWS-Instance.git",
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "description": "Your AWS Access  key",
+      "value": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "description": "Your AWS Secret Key",
+      "required": true
+    },
+    "AWS_DEFAULT_REGION": {
+      "description": "Default deployment region",
+      "required": false
+    },
+    "AWS_KEYPAIR_NAME": {
+      "description": "SSH Keypair name",
+      "required": true
+    },
+    "AWS_SECURITY_GROUPS": {
+      "description": "Security group id list",
+      "required": "true"
+    },
+    "AWS_SUBNET": {    
+      "description": "Region subnet",
+      "required": "true"
+    },
+    "ASSET_NAME": {
+      "description": "Instance Name",
+      "required": "true"
+    }
+  },
+  "buildpacks": [{
+      "url": "https://github.com/odedlaz/heroku-buildpack-awscli.git"
+    }, {
+      "url": "https://github.com/kr/heroku-buildpack-inline.git"
+    }]
+  }
+}

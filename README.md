@@ -3,6 +3,8 @@
 This is a [Heroku Buildpack](https://devcenter.heroku.com/articles/buildpacks)
 for Launching an instance in AWS
 
+Uses the [odedlaz awscli buildcli](https://elements.heroku.com/buildpacks/odedlaz/heroku-buildpack-awscli)
+
 ## Deployment
 
 | Provider | |
